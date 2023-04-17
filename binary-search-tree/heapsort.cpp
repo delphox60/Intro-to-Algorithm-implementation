@@ -31,6 +31,12 @@ void max_heapify(int idx)
     max_heapify(largest);
 }
 
+void build_max_heap()
+{
+    for (int i = heap_size / 2; i >= 1; i++)
+        max_heapify(i);
+}
+
 int main()
 {
     cin >> heap_size;
